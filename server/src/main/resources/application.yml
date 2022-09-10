@@ -1,0 +1,13 @@
+spring:
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+  data:
+    mongodb:
+      port: 27017
+      host: ${MONGO_HOST:127.0.0.1}
+      database: demo
+      repositories:
+        type: auto
+cors:
+  originPatterns: http://localhost:4200

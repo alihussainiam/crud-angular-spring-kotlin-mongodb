@@ -1,0 +1,69 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+ 
+
+
+    
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            [(ngModel)]="Agency.name"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="country">country</label>
+          <input
+            type="text"
+            class="form-control"
+            id="country"
+            [(ngModel)]="Agency.country"
+            name="country"
+          />
+        </div>
+        <div class="form-group">
+          <label for="countryCode">countryCode</label>
+          <input
+            type="text"
+            class="form-control"
+            id="countryCode"
+            [(ngModel)]="Agency.countryCode"
+            name="countryCode"
+          />
+        </div>
+        <div class="form-group">
+          <label for="settlementCurrency">settlementCurrency</label>
+          <input
+            type="text"
+            class="form-control"
+            id="settlementCurrency"
+            [(ngModel)]="Agency.settlementCurrency"
+            name="settlementCurrency"
+          />
+        </div>
+        <div class="form-group">
+          <label for="contactPerson">contactPerson</label>
+          <input
+            type="text"
+            class="form-control"
+            id="contactPerson"
+            [(ngModel)]="Agency.contactPerson"
+            name="contactPerson"
+          />
+        </div>
+
+      <button (click)="saveAgency()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Agency was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newAgency()">Add</button>
+    </div>
+  </div>
+</div>

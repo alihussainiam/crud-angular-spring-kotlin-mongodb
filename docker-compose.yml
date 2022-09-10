@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+
+  server:
+    container_name: demo_app
+    image: server/flix:latest
+    depends_on:
+      - db
+    ports:
+      - '80:80'
+
+    environment:
+      - MONGO_HOST: mongo
+
+
+  mongo:
+    container_name: demo_database
+    image: mongo:latest
+    command:
+      - --storageEngine=wiredTiger
+    volumes:
+      - data:/data/db
+    ports:
+      - '27017:27017'
+
+volumes:
+  data:

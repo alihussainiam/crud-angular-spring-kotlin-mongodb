@@ -1,0 +1,12 @@
+**/node_modules
+**/.vscode
+**/.git
+**/.gitignore
+**/npm-debug.log
+**/README.md
+**/LICENSE
+
+
+
+server/*
+!server/build/libs/*.jar

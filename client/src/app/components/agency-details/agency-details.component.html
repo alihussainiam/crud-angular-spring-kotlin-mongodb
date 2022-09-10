@@ -1,0 +1,108 @@
+<div *ngIf="viewMode; else editable">
+  <div *ngIf="currentAgency.id">
+    <h4>Agency</h4>
+    <div>
+      <label><strong>Name:</strong></label> {{ currentAgency.name }}
+    </div>
+    <div>
+      <label><strong>Description:</strong></label>
+      {{ currentAgency.country }}
+    </div>
+    <div>
+      <label><strong>Status:</strong></label>
+      {{ currentAgency.published ? "Published" : "Pending" }}
+    </div>
+
+    <a
+      class="badge badge-warning"
+      routerLink="/agency/{{ currentAgency.id }}"
+    >
+      Edit
+    </a>
+  </div>
+
+  <div *ngIf="!currentAgency">
+    <br />
+    <p>Please click on a Agency...</p>
+  </div>
+</div>
+
+<ng-template #editable>
+  <div *ngIf="currentAgency.id" class="edit-form">
+    <h4>Agency</h4>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="currentAgency.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="country">country</label>
+        <input
+          type="text"
+          class="form-control"
+          id="country"
+          [(ngModel)]="currentAgency.country"
+          name="country"
+        />
+      </div>
+      <div class="form-group">
+        <label for="countryCode">countryCode</label>
+        <input
+          type="text"
+          class="form-control"
+          id="countryCode"
+          [(ngModel)]="currentAgency.countryCode"
+          name="countryCode"
+        />
+      </div>
+      <div class="form-group">
+        <label for="settlementCurrency">settlementCurrency</label>
+        <input
+          type="text"
+          class="form-control"
+          id="settlementCurrency"
+          [(ngModel)]="currentAgency.settlementCurrency"
+          name="settlementCurrency"
+        />
+      </div>
+      <div class="form-group">
+        <label for="contactPerson">contactPerson</label>
+        <input
+          type="text"
+          class="form-control"
+          id="contactPerson"
+          [(ngModel)]="currentAgency.contactPerson"
+          name="contactPerson"
+        />
+      </div>
+
+
+    </form>
+
+
+
+    <button class="badge badge-danger mr-2" (click)="deleteAgency()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateAgency()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentAgency.id">
+    <br />
+    <p>Cannot access this Agency...</p>
+  </div>
+</ng-template>
