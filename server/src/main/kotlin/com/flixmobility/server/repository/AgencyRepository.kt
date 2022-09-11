@@ -1,6 +1,6 @@
-package com.flixmobility.server.repository
+package com.demorepository
 
-import com.flixmobility.server.models.Agency
+import com.demo.server.models.Agency
 import org.springframework.data.repository.CrudRepository
 
 interface AgencyRepository: CrudRepository<Agency, String> {

@@ -1,8 +1,8 @@
-package com.flixmobility.server.services.interfaces
+package com.demo.server.services.interfaces
 
-import com.flixmobility.server.mappers.AgencyDto
-import com.flixmobility.server.payloads.requests.CreateAgencyRequest
-import com.flixmobility.server.payloads.requests.UpdateAgencyRequest
+import com.demo.server.mappers.AgencyDto
+import com.demo.server.payloads.requests.CreateAgencyRequest
+import com.demo.server.payloads.requests.UpdateAgencyRequest
 
 public interface AgencyService {
     fun findAgencies(): MutableIterable<AgencyDto>

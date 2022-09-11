@@ -1,4 +1,4 @@
-package com.flixmobility.server.models
+package com.demo.server.models
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document

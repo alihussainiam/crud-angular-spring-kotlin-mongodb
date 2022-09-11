@@ -4,7 +4,7 @@ services:
 
   server:
     container_name: demo_app
-    image: server/flix:latest
+    image: server/demo:latest
     depends_on:
       - db
     ports:

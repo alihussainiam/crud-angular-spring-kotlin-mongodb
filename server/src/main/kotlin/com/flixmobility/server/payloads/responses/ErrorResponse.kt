@@ -1,4 +1,4 @@
-package com.flixmobility.server.payloads.responses
+package com.demopayloads.responses
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import java.time.LocalDateTime

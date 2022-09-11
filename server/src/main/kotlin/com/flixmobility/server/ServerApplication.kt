@@ -1,4 +1,4 @@
-package com.flixmobility.server
+package com.demo.server
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

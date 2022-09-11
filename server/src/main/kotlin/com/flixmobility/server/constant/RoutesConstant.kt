@@ -1,4 +1,4 @@
-package com.flixmobility.server.constant
+package com.demo.server.constant
 
 object  RoutesConstant {
     const val API_VERSION = "/api/v1"

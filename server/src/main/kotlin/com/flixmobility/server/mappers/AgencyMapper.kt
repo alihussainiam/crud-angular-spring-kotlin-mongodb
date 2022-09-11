@@ -1,7 +1,7 @@
-package com.flixmobility.server.mappers
+package com.demo.server.mappers
 
-import com.flixmobility.server.models.Agency
-import com.flixmobility.server.payloads.requests.CreateAgencyRequest
+import com.demo.server.models.Agency
+import com.demo.server.payloads.requests.CreateAgencyRequest
 
 class AgencyMapper {
 

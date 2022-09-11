@@ -1,4 +1,4 @@
-package com.flixmobility.server.services
+package com.demo.server.services
 
 import org.junit.jupiter.api.Test
 

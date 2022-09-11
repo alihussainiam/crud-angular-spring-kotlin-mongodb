@@ -1,13 +1,13 @@
-package com.flixmobility.server.services;
+package com.demo;
 
-import com.flixmobility.server.exceptions.NotFoundException
-import com.flixmobility.server.mappers.AgencyDto
-import com.flixmobility.server.mappers.AgencyMapper
-import com.flixmobility.server.models.Agency;
-import com.flixmobility.server.payloads.requests.CreateAgencyRequest
-import com.flixmobility.server.payloads.requests.UpdateAgencyRequest
-import com.flixmobility.server.repository.AgencyRepository;
-import com.flixmobility.server.services.interfaces.AgencyService
+import com.demons.NotFoundException
+import com.demo.server.mappers.AgencyDto
+import com.demo.server.mappers.AgencyMapper
+import com.demo.server.models.Agency;
+import com.demo.requests.CreateAgencyRequest
+import com.demo.server.payloads.requests.UpdateAgencyRequest
+import com.demo.server.repository.AgencyRepository;
+import com.demo.server.services.interfaces.AgencyService
 import org.springframework.stereotype.Service;
 
 @Service

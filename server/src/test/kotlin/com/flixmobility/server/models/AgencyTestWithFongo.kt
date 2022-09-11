@@ -1,7 +1,7 @@
-package com.flixmobility.server
+package com.demo.server
 
-import com.flixmobility.server.models.Agency
-import com.flixmobility.server.repository.AgencyRepository
+import com.demo.server.models.Agency
+import com.demo.server.repository.AgencyRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll;

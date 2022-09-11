@@ -1,13 +1,13 @@
-package com.flixmobility.server.controllers
+package com.demo.server.controllers
 
-import com.flixmobility.server.models.Agency
+import com.demo.server.models.Agency
 import org.springframework.http.ResponseEntity
-import com.flixmobility.server.constant.RoutesConstant.AGENCY_ROUTES
-import com.flixmobility.server.constant.RoutesConstant.API_VERSION
-import com.flixmobility.server.exceptions.NotFoundException
-import com.flixmobility.server.payloads.requests.CreateAgencyRequest
-import com.flixmobility.server.payloads.requests.UpdateAgencyRequest
-import com.flixmobility.server.services.AgencyServiceImpl
+import com.demo.server.constant.RoutesConstant.AGENCY_ROUTES
+import com.demo.server.constant.RoutesConstant.API_VERSION
+import com.demo.server.exceptions.NotFoundException
+import com.demo.server.payloads.requests.CreateAgencyRequest
+import com.demo.server.payloads.requests.UpdateAgencyRequest
+import com.demo.server.services.AgencyServiceImpl
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import org.springframework.http.HttpStatus

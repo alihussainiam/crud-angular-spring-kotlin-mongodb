@@ -1,4 +1,4 @@
-package com.flixmobility.server.payloads.requests
+package com.demo.server.payloads.requests
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
