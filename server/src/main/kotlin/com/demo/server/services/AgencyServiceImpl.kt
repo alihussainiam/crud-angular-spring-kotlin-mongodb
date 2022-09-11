@@ -1,13 +1,15 @@
-package com.demo;
+package com.demo.server.services;
 
-import com.demons.NotFoundException
+import com.demo.server.exceptions.NotFoundException
 import com.demo.server.mappers.AgencyDto
 import com.demo.server.mappers.AgencyMapper
 import com.demo.server.models.Agency;
-import com.demo.requests.CreateAgencyRequest
+import com.demo.server.payloads.requests.CreateAgencyRequest
 import com.demo.server.payloads.requests.UpdateAgencyRequest
-import com.demo.server.repository.AgencyRepository;
+import com.demo.server.repository.AgencyRepository
 import com.demo.server.services.interfaces.AgencyService
+
+
 import org.springframework.stereotype.Service;
 
 @Service
