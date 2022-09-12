@@ -46,6 +46,4 @@ COPY --from=build /opt/web/dist/demo /usr/share/nginx/html/
 
 COPY --from=build /opt/server/build/libs/*.jar /app/spring-boot-application.jar
 
-# COPY server/build/libs/*.jar /app/spring-boot-application.jar
-
 ENTRYPOINT $SCRIPTS_FOLDER/entrypoint.sh
