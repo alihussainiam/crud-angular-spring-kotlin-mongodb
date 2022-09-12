@@ -6,7 +6,3 @@
 **/README.md
 **/LICENSE
 
-
-
-server/*
-!server/build/libs/*.jar
