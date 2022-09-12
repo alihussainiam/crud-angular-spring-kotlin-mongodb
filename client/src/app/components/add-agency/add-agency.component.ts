@@ -30,14 +30,7 @@ export class AddAgencyComponent {
 
   newAgency(): void {
     this.submitted = false;
-    this.Agency = {
-      name: '',
-      countryCode: '',
-      country: '',
-      settlementCurrency: '',
-      contactPerson:'',
-      street:'',
-    };
+    this.Agency = new Agency()
   }
 
 }
