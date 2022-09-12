@@ -1,4 +1,4 @@
-# crud-angular-spring-kotlin-mongodb
+# crud-angular-spring-kotlin-mongodb-nginx
 
 
 ## Running the app using docker-compose
