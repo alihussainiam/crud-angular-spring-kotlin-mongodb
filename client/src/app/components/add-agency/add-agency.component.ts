@@ -13,6 +13,7 @@ export class AddAgencyComponent {
     name: '',
     countryCode: '',
     country: '',
+    city: '',
     settlementCurrency: '',
     contactPerson:'',
     street:'',
@@ -23,8 +24,13 @@ export class AddAgencyComponent {
 
   saveAgency(): void {
     const data = {
-      name: this.Agency.name,
-      country: this.Agency.country
+      agency_name: this.Agency.name,
+      agency_country: this.Agency.country,
+      agency_country_code:this.Agency.countryCode,
+      agency_city:this.Agency.city,
+      agency_street:this.Agency.street,
+      agency_settlement_currency:this.Agency.settlementCurrency,
+      agency_contact_person:this.Agency.contactPerson
     };
 
     this.AgencyService.create(data)
@@ -41,8 +47,11 @@ export class AddAgencyComponent {
     this.submitted = false;
     this.Agency = {
       name: '',
+      countryCode: '',
       country: '',
-      published: false
+      settlementCurrency: '',
+      contactPerson:'',
+      street:'',
     };
   }
 

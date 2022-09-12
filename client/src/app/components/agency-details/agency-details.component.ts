@@ -59,7 +59,7 @@ export class AgencyDetailsComponent implements OnInit {
       .subscribe({
         next: (res) => {
           console.log(res);
-          this.currentAgency.published = status;
+      
           this.message = res.message ? res.message : 'The status was updated successfully!';
         },
         error: (e) => console.error(e)

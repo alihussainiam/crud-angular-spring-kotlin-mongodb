@@ -21,7 +21,7 @@ export class AgencyService {
   }
 
   create(data: any): Observable<any> {
-    return this.http.post(baseUrl, data);
+    return this.http.post(`${baseUrl}/`, data);
   }
 
   update(id: any, data: any): Observable<any> {
@@ -33,7 +33,7 @@ export class AgencyService {
   }
 
   deleteAll(): Observable<any> {
-    return this.http.delete(baseUrl);
+    return this.http.delete(`${baseUrl}/`);
   }
 
   findByName(name: any): Observable<Agency[]> {

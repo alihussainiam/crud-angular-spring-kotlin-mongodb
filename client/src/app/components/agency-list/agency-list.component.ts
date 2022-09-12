@@ -42,16 +42,6 @@ export class AgenciesListComponent implements OnInit {
     this.currentIndex = index;
   }
 
-  removeAllAgencys(): void {
-    this.AgencyService.deleteAll()
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-          this.refreshList();
-        },
-        error: (e) => console.error(e)
-      });
-  }
 
   searchName(): void {
     this.currentAgency = {};
