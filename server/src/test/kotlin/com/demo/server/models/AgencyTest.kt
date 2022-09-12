@@ -1,6 +1,5 @@
-package com.demo.server
+package com.demo.server.models
 
-import com.demo.server.models.Agency
 import com.demo.server.repository.AgencyRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.AfterAll
@@ -9,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest
-import org.springframework.boot.test.context.SpringBootTest
 
 
 @DataMongoTest
@@ -36,8 +34,6 @@ class AgencyTest {
         assertThat(agencyRepository.findAll()).isNotEmpty
 
     }
-
-
 
 
     @AfterAll

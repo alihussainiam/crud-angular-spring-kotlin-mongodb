@@ -43,18 +43,4 @@ export class AgenciesListComponent implements OnInit {
   }
 
 
-  searchName(): void {
-    this.currentAgency = {};
-    this.currentIndex = -1;
-
-    this.AgencyService.findByName(this.name)
-      .subscribe({
-        next: (data) => {
-          this.agencies = data;
-          console.log(data);
-        },
-        error: (e) => console.error(e)
-      });
-  }
-
 }

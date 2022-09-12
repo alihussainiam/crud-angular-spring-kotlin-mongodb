@@ -4,7 +4,6 @@ import { AgencyService } from './agency.service';
 import { HttpClient } from '@angular/common/http';
 
 import { Agency, toAgencyRequest } from '../models/agency.model';
-import { pairs } from 'rxjs';
 
 describe('AgencyService', () => {
   let service: AgencyService;
