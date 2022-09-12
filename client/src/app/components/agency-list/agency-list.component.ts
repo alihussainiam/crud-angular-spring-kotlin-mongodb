@@ -10,7 +10,7 @@ import { AgencyService } from 'src/app/services/agency.service';
 export class AgenciesListComponent implements OnInit {
 
   agencies?: Agency[];
-  currentAgency: Agency = {};
+  currentAgency: Agency = new Agency();
   currentIndex = -1;
   name = '';
 

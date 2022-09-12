@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AgencyService } from 'src/app/services/agency.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Agency } from 'src/app/models/agency.model';
+import { Agency, toAgencyRequest } from 'src/app/models/agency.model';
 
 @Component({
   selector: 'app-agency-details',
@@ -12,14 +12,7 @@ export class AgencyDetailsComponent implements OnInit {
 
   @Input() viewMode = false;
 
-  @Input() currentAgency: Agency = {
-    name: '',
-    countryCode: '',
-    country: '',
-    settlementCurrency: '',
-    contactPerson:'',
-    street:'',
-  };
+  @Input() currentAgency: Agency = new Agency()
   
   message = '';
 
@@ -46,30 +39,12 @@ export class AgencyDetailsComponent implements OnInit {
       });
   }
 
-  updatePublished(status: boolean): void {
-    const data = {
-      name: this.currentAgency.name,
-      contactPerson: this.currentAgency.contactPerson,
-      country: this.currentAgency.country
-    };
 
+
+  updateAgency(id: string): void {
     this.message = '';
 
-    this.AgencyService.update(this.currentAgency.id, data)
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-      
-          this.message = res.message ? res.message : 'The status was updated successfully!';
-        },
-        error: (e) => console.error(e)
-      });
-  }
-
-  updateAgency(): void {
-    this.message = '';
-
-    this.AgencyService.update(this.currentAgency.id, this.currentAgency)
+    this.AgencyService.update(id,toAgencyRequest(this.currentAgency))
       .subscribe({
         next: (res) => {
           console.log(res);

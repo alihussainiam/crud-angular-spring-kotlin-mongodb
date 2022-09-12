@@ -5,8 +5,32 @@
       <label><strong>Name:</strong></label> {{ currentAgency.name }}
     </div>
     <div>
-      <label><strong>Description:</strong></label>
+      <label><strong>Country:</strong></label>
       {{ currentAgency.country }}
+    </div>
+    <div>
+      <label><strong>Country Code:</strong></label>
+      {{ currentAgency.countryCode }}
+    </div>
+
+    <div>
+      <label><strong>City:</strong></label>
+      {{ currentAgency.city }}
+    </div>
+
+    <div>
+      <label><strong>Street:</strong></label>
+      {{ currentAgency.street }}
+    </div>
+
+    <div>
+      <label><strong>Settlemnent Currency:</strong></label>
+      {{ currentAgency.settlementCurrency }}
+    </div>
+
+    <div>
+      <label><strong>Contact Person:</strong></label>
+      {{ currentAgency.contactPerson }}
     </div>
     <div>
       
@@ -93,7 +117,7 @@
     <button
       type="submit"
       class="badge badge-success mb-2"
-      (click)="updateAgency()"
+      (click)="updateAgency(currentAgency.id)"
     >
       Update
     </button>
