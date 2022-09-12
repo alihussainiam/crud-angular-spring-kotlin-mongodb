@@ -4,14 +4,16 @@ services:
 
   server:
     container_name: demo_app
-    image: server/demo:latest
+    image: flix/app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     depends_on:
-      - db
+      - mongo
     ports:
       - '80:80'
-
     environment:
-      - MONGO_HOST: mongo
+       MONGO_HOST: mongo
 
 
   mongo:

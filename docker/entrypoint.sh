@@ -5,4 +5,4 @@ set -o errexit
 cd $SCRIPTS_FOLDER
 
 # service nginx start
-exec /usr/bin/supervisord -c /etc/supervisord.conf
+exec /usr/bin/supervisord -c supervisord.conf

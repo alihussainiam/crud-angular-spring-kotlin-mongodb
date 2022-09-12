@@ -10,4 +10,4 @@ spring:
       repositories:
         type: auto
 cors:
-  originPatterns: http://localhost:4200
+  originPatterns:  ${CORS_PATTERN:http://localhost:4200}
