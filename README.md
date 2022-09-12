@@ -1,4 +1,4 @@
-# CRUD app using Angular, Spring Boot(kotlin,gradle), MongoDB, Docker, Nginx
+# CRUD app using Angular, Spring Boot (kotlin,gradle), MongoDB, Docker, Nginx
 
 
 ## Running the app using docker-compose
